@@ -30,7 +30,10 @@ def send_welcome(message):
 def echo_all(message):
 	bot.reply_to(message, message.text)
 	
-
+	
+@bot.message_handler(func=lambda message: message.text.startswith('Hey'), content_types=['text'])
+def handle_hey(message):
+    bot.reply_to(message, "I see you started your message with 'Hey'! How can I help you?")
 
 # === RUN BOT ===
 print("🤖 Bot is running...")
