@@ -31,7 +31,7 @@ def send_welcome(message):
 @bot.message_handler(func=lambda message: True)
 def handle_query(message):
     query = message.text.strip()
-bot.send_message(message.chat.id, (query "\n \n 🔴 *Credit by @cyber_tufan*"), parse_mode='Markdown')
+bot.send_message(message.chat.id, " 🔴 *Credit by @cyber_tufan*", parse_mode='Markdown')
 
 
 # === RUN BOT ===
