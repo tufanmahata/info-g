@@ -26,9 +26,9 @@ def send_welcome(message):
     )
     bot.send_message(message.chat.id, welcome_text, parse_mode='Markdown')
 
-@bot.message_handler(func=lambda message: True)
-def echo_all(message):
-	bot.reply_to(message, message.text)
+#@bot.message_handler(func=lambda message: True)
+#def echo_all(message):
+	#bot.reply_to(message, message.text)
 	
 	
 @bot.message_handler(func=lambda message: message.text.startswith('Hey'), content_types=['text'])
