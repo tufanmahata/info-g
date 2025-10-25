@@ -26,14 +26,14 @@ def send_welcome(message):
     )
     bot.send_message(message.chat.id, welcome_text, parse_mode='Markdown')
 
-@bot.message_handler(func=lambda message: True)
-def echo_all(message):
-bot.reply_to(message, message.text)
-	
-	
 @bot.message_handler(func=lambda message: message.text.startswith('Hey'), content_types=['text'])
 def handle_hey(message):
     bot.reply_to(message, "I see you started your message with 'Hey'! How can I help you?")
+
+
+@bot.message_handler(func=lambda message: True)
+def echo_all(message):
+	bot.reply_to(message, message.text)
 
 # === RUN BOT ===
 print("🤖 Bot is running...")
