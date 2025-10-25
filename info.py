@@ -27,12 +27,6 @@ def send_welcome(message):
     bot.send_message(message.chat.id, welcome_text, parse_mode='Markdown')
 
 
-# === HANDLE TEXT MESSAGE (Target Input) ===
-@bot.message_handler(func=lambda message: True)
-def handle_query(message):
-    query = message.text.strip()
-bot.send_message(message.chat.id, " 🔴 *Credit by @cyber_tufan*", parse_mode='Markdown')
-
 
 # === RUN BOT ===
 print("🤖 Bot is running...")
